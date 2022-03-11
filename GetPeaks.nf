@@ -32,10 +32,10 @@ process SaveCells
 publishDir "${params.outdir}/Cells", mode: 'rellink'
 
 input:
-path cells, stageAs:"cells.txt" from params.cells
+path cells, stageAs:"cells.txt.gz" from params.cells
 
 output:
-path 'cells.txt' into cell_names
+path 'cells.txt.gz' into cell_names
 
 '''
 echo Save Cells
